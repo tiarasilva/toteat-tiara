@@ -7,3 +7,9 @@ El frotend fue implementado con React JS y el diseño con Material Ui. Mientras 
 Correr backend: python3 python3 manage.py runserver
 
 Correr frontend: npm start
+
+Backend subido en heroku con las siguientes rutas:
+https://backend-toteat-tiara.herokuapp.com/polls
+https://backend-toteat-tiara.herokuapp.com/polls/viewdb
+https://backend-toteat-tiara.herokuapp.com/polls/all_payments
+https://backend-toteat-tiara.herokuapp.com/polls/all_categories
