@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/toteat-tiara/static/css/main.a9041707.css",
+    "main.js": "/toteat-tiara/static/js/main.1006bdfd.js",
+    "static/js/787.b3cd2f50.chunk.js": "/toteat-tiara/static/js/787.b3cd2f50.chunk.js",
+    "index.html": "/toteat-tiara/index.html",
+    "main.a9041707.css.map": "/toteat-tiara/static/css/main.a9041707.css.map",
+    "main.1006bdfd.js.map": "/toteat-tiara/static/js/main.1006bdfd.js.map",
+    "787.b3cd2f50.chunk.js.map": "/toteat-tiara/static/js/787.b3cd2f50.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a9041707.css",
+    "static/js/main.1006bdfd.js"
+  ]
+}
