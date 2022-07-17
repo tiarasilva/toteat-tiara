@@ -17,27 +17,6 @@ import axios from "axios";
 const URL_CATEGORY = process.env.REACT_APP_CATEGORY;
 console.log(process.env.REACT_APP_CATEGORY);
 
-const columnsProducts = [
-  {
-    field: "product",
-    headerName: "Producto",
-    width: 150,
-    editable: true,
-  },
-  {
-    field: "sales",
-    headerName: "Ventas",
-    width: 150,
-    editable: true,
-  },
-  {
-    field: "price",
-    headerName: "Precio",
-    width: 150,
-    editable: true,
-  },
-];
-
 export default function Statistics() {
   const [data, setData] = useState([]); // { 'category1': {'sales': '1000', 'producto1': {'sales': 1, 'price': 1200 }, 'producto2': {'sales': 3, 'price': 890 }}}
   const [error, setError] = useState("");

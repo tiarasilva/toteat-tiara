@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import { Card, Box, Fab, CardContent, Typography, Grid } from "@mui/material";
@@ -9,7 +9,6 @@ const URL_PAYMENT = process.env.REACT_APP_PAYMENT;
 
 export default function Payment() {
   const [data, setData] = useState([]);
-  const [dataChart, setDataChart] = useState([]);
   const [error, setError] = useState("");
 
   useEffect(() => {
@@ -36,10 +35,13 @@ export default function Payment() {
           </Typography>
 
           <PieChart
-            label={({ dataEntry }) => (
-              dataEntry.title, Math.round(dataEntry.percentage) + "%"
-            )}
-            labelStyle={{ fontSize: "2px", fontFamily: "Montserrat" }}
+            label={({ dataEntry }) => Math.round(dataEntry.percentage) + "%"}
+            labelStyle={{
+              fontSize: "5px",
+              fontFamily: "Montserrat",
+              opacity: 0.75,
+              pointerEvents: "none",
+            }}
             data={data}
             style={{
               height: "400px",
@@ -50,13 +52,9 @@ export default function Payment() {
             segmentsStyle={{ transition: "stroke .3s", cursor: "pointer" }}
             animate
             labelPosition={100 - lineWidth / 2}
-            labelStyle={{
-              opacity: 0.75,
-              pointerEvents: "none",
-            }}
           />
           {data.map((key, index) => (
-            <Grid container spacing={2}>
+            <Grid container spacing={2} key={index}>
               <Grid item xs={4}>
                 {/* <Box sx={{ bgcolor: key.color, width: "20px" }}>
                   <Typography sx={{ width: "20px" }}> {index}.- </Typography>
@@ -64,7 +62,7 @@ export default function Payment() {
                 <Box sx={{ bgcolor: key.color, width: "20px" }}>
                   <Fab
                     size="small"
-                    disableFocusRipple="true"
+                    disableRipple={true}
                     sx={{ bgcolor: key.color }}
                     aria-label="add"
                   ></Fab>
